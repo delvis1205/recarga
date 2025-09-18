@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GG Shop - Itens de Jogos em Kwanza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo-dot"></span>
+      <span class="brand-text">GG Shop</span>
+    </div>
+    <div class="search-area">
+      <input id="searchInput" type="search" placeholder="Buscar item ou jogo..." aria-label="Buscar" />
+      <select id="sortSelect" aria-label="Ordenar">
+        <option value="relevance">Relevância</option>
+        <option value="price-asc">Preço: menor → maior</option>
+        <option value="price-desc">Preço: maior → menor</option>
+        <option value="name-asc">Nome: A → Z</option>
+      </select>
+    </div>
+    <div id="themeSwitch" class="theme-switch" aria-label="Alterar cores do site">
+      <button data-theme="#111111" class="dot" title="Padrão"></button>
+      <button data-theme="#2563eb" class="dot selected" title="Azul"></button>
+      <button data-theme="#ef4444" class="dot" title="Vermelho"></button>
+      <button data-theme="#16a34a" class="dot" title="Verde"></button>
+    </div>
+    <button class="cart-button" id="openCartBtn" aria-label="Abrir carrinho">
+      <span class="cart-count" id="cartCount">0</span>
+      Carrinho
+    </button>
+  </header>
+
+  <!-- Filtros por jogo -->
+  <nav class="game-filter" id="gameFilter" aria-label="Filtrar por jogo">
+    <button class="pill active" data-game="all">Todos</button>
+    <button class="pill" data-game="Free Fire">Free Fire</button>
+    <button class="pill" data-game="Delta Force M">Delta Force M</button>
+    <button class="pill" data-game="eFootball">eFootball</button>
+    <button class="pill" data-game="Outros">Outros</button>
+  </nav>
+
+  <!-- Grid de produtos -->
+  <main class="container">
+    <section id="productsGrid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <!-- Carrinho lateral -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Carrinho">
+    <div class="cart-header">
+      <h2>Seu Carrinho</h2>
+      <button id="closeCartBtn" class="icon-btn" aria-label="Fechar carrinho">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">AOA 0,00</strong>
+      </div>
+      <div class="row small">
+        <span>Taxas</span>
+        <span>Incluídas no preço</span>
+      </div>
+      <button id="checkoutBtn" class="primary">Finalizar compra</button>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay" hidden></div>
+
+  <!-- Modal de checkout -->
+  <dialog id="checkoutModal" class="modal">
+    <form method="dialog" class="checkout-form" id="checkoutForm">
+      <div class="modal-header">
+        <h3>Finalizar compra</h3>
+        <button class="icon-btn" id="closeCheckout" aria-label="Fechar">✕</button>
+      </div>
+      <div class="form-grid">
+        <label>
+          Nome completo
+          <input name="nome" required autocomplete="name" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>
+          Telefone (WhatsApp)
+          <input type="tel" name="telefone" required inputmode="tel" />
+        </label>
+        <label>
+          ID do jogador
+          <input name="idJogador" required />
+        </label>
+        <label>
+          Nickname no jogo
+          <input name="nickname" required />
+        </label>
+        <label>
+          Método de pagamento
+          <select name="pagamento" required>
+            <option value="Multicaixa">Multicaixa</option>
+            <option value="Transferência">Transferência Bancária</option>
+            <option value="Referência">Referência</option>
+          </select>
+        </label>
+      </div>
+      <div class="summary" id="checkoutSummary"></div>
+      <div class="actions">
+        <button type="button" class="ghost" id="cancelCheckout">Cancelar</button>
+        <button type="submit" class="primary">Confirmar pedido</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Import map + App -->
+  <script type="importmap">
+  {
+    "imports": {
+      "nanoid": "https://esm.sh/nanoid@5.0.7/non-secure"
+    }
+  }
+  </script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

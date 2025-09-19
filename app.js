@@ -44,16 +44,22 @@ function cartTotals() {
   return { subtotal, count };
 }
 
- /* Filtros por jogo */
-  document.querySelectorAll("#gameFilter .pill").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll("#gameFilter .pill").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      state.game = btn.dataset.game;
-      renderProducts();
+/* Render products */
+function renderProducts() {
+  let list = products.slice();
+
+  if (state.game !== 'all') {
+    list = list.filter(p => p.game === state.game);
+  }
+  if (state.search) {
+    const q = state.search.toLowerCase();
+    list = list.filter(p =>
+      p.title.toLowerCase().includes(q) ||
+      p.game.toLowerCase().includes(q)
     );
   }
-  switch (sort) {
+
+  switch (state.sort) {
     case 'price-asc': list.sort((a,b) => a.priceAOA - b.priceAOA); break;
     case 'price-desc': list.sort((a,b) => b.priceAOA - a.priceAOA); break;
     case 'name-asc': list.sort((a,b) => a.title.localeCompare(b.title)); break;
@@ -218,15 +224,6 @@ els.checkoutForm.addEventListener('submit', (e) => {
   saveCart(); renderCart();
   closeCheckoutModal(); closeDrawer();
   e.target.reset();
-});
-
-els.themeSwitch.addEventListener('click', (e) => {
-  const btn = e.target.closest('[data-theme]');
-  if (!btn) return;
-  const color = btn.dataset.theme;
-  document.documentElement.style.setProperty('--accent', color);
-  els.themeSwitch.querySelectorAll('.dot').forEach(d => d.classList.remove('selected'));
-  btn.classList.add('selected');
 });
 
 /* Init */

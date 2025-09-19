@@ -5,49 +5,49 @@ export const products = [
     game: "Free Fire",
     title: "65 Diamantes + Bônus",
     priceAOA: 900,
-    image: "65.png"
+    image: "dima.png"
   },
   {
     id: "ff-100d",
     game: "Free Fire",
     title: "100 Diamantes + Bônus",
     priceAOA: 1.340,
-    image: "100.png"
+    image: "dima.png"
   },
   {
     id: "ff-310d",
     game: "Free Fire",
     title: "310 Diamantes + Bônus",
     priceAOA: 4.600,
-    image: "310.png"
+    image: "dima.png"
   },
   {
     id: "ff-520d",
     game: "Free Fire",
     title: "520 Diamantes + Bônus",
     priceAOA: 5.920,
-    image: "520.png"
+    image: "dima.png"
   },
   {
     id: "ff-1060d",
     game: "Free Fire",
     title: "1.060 Diamantes + Bônus",
     priceAOA: 12.300,
-    image: "1060.png"
+    image: "dima.png"
   },
   {
     id: "ff-2180d",
     game: "Free Fire",
     title: "2.180 Diamantes + Bônus",
     priceAOA: 24.100,
-    image: "2180.png"
+    image: "dima.png"
   },
   {
     id: "ff-5600d",
     game: "Free Fire",
     title: "5.600 Diamantes + Bônus",
     priceAOA: 52.200,
-    image: "5600.png"
+    image: "dima.png"
   },
   {
     id: "ff-passed",
@@ -96,7 +96,7 @@ export const products = [
     game: "Free Fire",
     title: "Armas Evolutivas por 30 Dias",
     priceAOA: 5.100,
-    image: "amen.png"
+    image: "e30.png"
   },
    {
     id: "ff-likesd",
@@ -224,56 +224,56 @@ export const products = [
     game: "Delta Force",
     title: "18 Moedas Delta Force",
     priceAOA: 750,
-    image: "18.png"
+    image: "delta.png"
   },
   {
     id: "dfm-30",
     game: "Delta Force",
     title: "30 Moedas Delta Force",
     priceAOA: 1100,
-    image: "30.png"
+    image: "delta.png"
   },
   {
     id: "dfm-60",
     game: "Delta Force",
     title: "60 Moedas Delta Force",
     priceAOA: 2050,
-    image: "60.png"
+    image: "delta.png"
   },
   {
     id: "df-300",
     game: "Delta Force",
     title: "300 Moedas Delta Force",
     priceAOA: 6100,
-    image: "300.png"
+    image: "delta.png"
   },
   {
     id: "dfm-genesis",
     game: "Delta Force",
     title: "Black Hawk Down - Gênesis",
     priceAOA: 4240,
-    image: "genesis.png"
+    image: "delta1.png"
   },
   {
     id: "dfm-reinvencao",
     game: "Delta Force",
     title: "Black Hawk Down - Reinvenção",
     priceAOA: 7200,
-    image: "reinvencao.png"
+    image: "delta1.png"
   },
   {
     id: "dfm-silencioso",
     game: "Delta Force",
     title: "Suprimentos do Sentinela Silencioso",
     priceAOA: 1500,
-    image: "silencioso.png"
+    image: "delta1.png"
   },
   {
     id: "dfm-avancado",
     game: "Delta Force",
     title: "Suprimentos do Sentinela Silencioso – Avançado",
     priceAOA: 4260,
-    image: "avancado.png"
+    image: "delta1.png"
   },
 
   // eFootball
@@ -282,49 +282,49 @@ export const products = [
     game: "FC Mobile",
     title: "45 FC Points",
     priceAOA: 900,
-    image: "fc_points.png"
+    image: "fc.png"
   },
   {
     id: "fc-100",
     game: "FC Mobile",
     title: "100 FC Points",
     priceAOA: 1540,
-    image: "fc_points.png"
+    image: "fc.png"
   },
   {
     id: "fc-520",
     game: "FC Mobile",
     title: "520 FC Points",
     priceAOA: 6120,
-    image: "fc_points.png"
+    image: "fc.png"
   },
   {
     id: "fc-1070",
     game: "FC Mobile",
     title: "1070 FC Points",
     priceAOA: 12100,
-    image: "fc_points.png"
+    image: "fc.png"
   },
   {
     id: "fc-2200",
     game: "FC Mobile",
     title: "2200 FC Points",
     priceAOA: 23300,
-    image: "fc_points.png"
+    image: "fc.png"
   },
   {
     id: "fc-5750",
     game: "FC Mobile",
     title: "5750 FC Points",
     priceAOA: 51720,
-    image: "fc_points.png"
+    image: "fc.png"
   },
   {
     id: "fc-12000",
     game: "FC Mobile",
     title: "12000 FC Points",
     priceAOA: 97400,
-    image: "fc_points.png"
+    image: "fc.png"
   },
 
   // Outros
@@ -349,28 +349,28 @@ export const products = [
     game: "Black Clover M",
     title: "43 Cristais Black Clover M",
     priceAOA: 1400,
-    image: "43.png"
+    image: "black.png"
   },
   {
     id: "bcm-88",
     game: "Black Clover M",
     title: "88 Cristais Black Clover M",
     priceAOA: 2800,
-    image: "88.png"
+    image: "black.png"
   },
   {
     id: "bcm-diario",
     game: "Black Clover M",
     title: "Pacote Diário de Cristal Negro",
     priceAOA: 1500,
-    image: "diario.png"
+    image: "black.png"
   },
   {
     id: "bcm-invocacao",
     game: "Black Clover M",
     title: "Pacote Semanal Para Invocação",
     priceAOA: 6000,
-    image: "invocacao.png"
+    image: "black.png"
   },
   
 // Blood Strike
@@ -379,76 +379,76 @@ export const products = [
     game: "Blood Strike",
     title: "50 Golds + 1 Bônus",
     priceAOA: 1320,
-    image: "bloodstrike.png"
+    image: "blood.png"
   },
   {
     id: "bs-96-5",
     game: "Blood Strike",
     title: "96 Golds + 5 Bônus",
     priceAOA: 1900,
-    image: "bloodstrike.png"
+    image: "blood.png"
   },
   {
     id: "bs-100-5",
     game: "Blood Strike",
     title: "100 Golds + 5 Bônus",
     priceAOA: 2100,
-    image: "bloodstrike.png"
+    image: "blood.png"
   },
   {
     id: "bs-300-20",
     game: "Blood Strike",
     title: "300 Golds + 20 Bônus",
     priceAOA: 4050,
-    image: "bloodstrike.png"
+    image: "blood.png"
   },
   {
     id: "bs-490-25",
     game: "Blood Strike",
     title: "490 Golds + 25 Bônus",
     priceAOA: 5600,
-    image: "bloodstrike.png"
+    image: "blood.png"
   },
   {
     id: "bs-500-40",
     game: "Blood Strike",
     title: "500 Golds + 40 Bônus",
     priceAOA: 6300,
-    image: "bloodstrike.png"
+    image: "blood.png"
   },
   {
     id: "bs-981-50",
     game: "Blood Strike",
     title: "981 Golds + 50 Bônus",
     priceAOA: 9200,
-    image: "bloodstrike.png"
+    image: "blood.png"
   },
   {
     id: "bs-1000-100",
     game: "Blood Strike",
     title: "1000 Golds + 100 Bônus",
     priceAOA: 10100,
-    image: "bloodstrike.png"
+    image: "blood.png"
   },
   {
     id: "bs-2000-260",
     game: "Blood Strike",
     title: "2000 Golds + 260 Bônus",
     priceAOA: 18720,
-    image: "bloodstrike.png"
+    image: "blood.png"
   },
   {
     id: "bs-2455-123",
     game: "Blood Strike",
     title: "2455 Golds + 123 Bônus",
     priceAOA: 20500,
-    image: "bloodstrike.png"
+    image: "blood.png"
   },
   {
     id: "bs-4910-246",
     game: "Blood Strike",
     title: "4910 Golds + 246 Bônus",
     priceAOA: 41000,
-    image: "bloodstrike.png"
+    image: "blood.png"
   },
 ];

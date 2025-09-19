@@ -216,7 +216,7 @@ export const products = [
     title: "Conta Nível 2 + Skin Kakashi + Águia Branca + Troca Nick",
     priceAOA: 7500,
     image: "conta.png"
-  }
+  },
 
   // Delta Force M
   {
@@ -325,7 +325,7 @@ export const products = [
     title: "12000 FC Points",
     priceAOA: 97400,
     image: "fc_points.png"
-  }
+  },
 
   // Outros
   {
@@ -372,6 +372,7 @@ export const products = [
     priceAOA: 6000,
     image: "invocacao.png"
   },
+  
 // Blood Strike
   {
     id: "bs-50-1",
@@ -449,5 +450,5 @@ export const products = [
     title: "4910 Golds + 246 Bônus",
     priceAOA: 41000,
     image: "bloodstrike.png"
-  }
+  },
 ];

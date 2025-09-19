@@ -45,11 +45,21 @@ body {
 }
 
 /* Filters */
-.game-filter { display: flex; gap: 8px; padding: 12px 20px; border-bottom: 1px solid var(--line); overflow:auto; }
-.pill {
-  border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; background: #fff; cursor: pointer;
+.game-filter .pill {
+  background: linear-gradient(45deg, #ff0044, #5500ff);
+  border: none;
+  border-radius: 25px;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.pill.active, .pill:hover { border-color: var(--accent); }
+.game-filter .pill:hover,
+.game-filter .pill.active {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px #ff0044, 0 0 15px #5500ff;
+}
 
 /* Layout */
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }

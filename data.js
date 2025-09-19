@@ -1,129 +1,453 @@
 export const products = [
   // Free Fire
   {
+    id: "ff-65d",
+    game: "Free Fire",
+    title: "65 Diamantes + Bônus",
+    priceAOA: 900,
+    image: "65.png"
+  },
+  {
     id: "ff-100d",
     game: "Free Fire",
-    title: "Diamantes 100",
-    priceAOA: 1200,
-    image: "ff_diamantes_100.png"
+    title: "100 Diamantes + Bônus",
+    priceAOA: 1.340,
+    image: "100.png"
   },
   {
     id: "ff-310d",
     game: "Free Fire",
-    title: "Diamantes 310",
-    priceAOA: 3200,
-    image: "ff_diamantes_310.png"
+    title: "310 Diamantes + Bônus",
+    priceAOA: 4.600,
+    image: "310.png"
   },
   {
-    id: "ff-pass",
+    id: "ff-520d",
     game: "Free Fire",
-    title: "Passe de Elite (mensal)",
-    priceAOA: 4500,
-    image: "ff_passe_elite.png"
+    title: "520 Diamantes + Bônus",
+    priceAOA: 5.920,
+    image: "520.png"
   },
+  {
+    id: "ff-1060d",
+    game: "Free Fire",
+    title: "1.060 Diamantes + Bônus",
+    priceAOA: 12.300,
+    image: "1060.png"
+  },
+  {
+    id: "ff-2180d",
+    game: "Free Fire",
+    title: "2.180 Diamantes + Bônus",
+    priceAOA: 24.100,
+    image: "2180.png"
+  },
+  {
+    id: "ff-5600d",
+    game: "Free Fire",
+    title: "5.600 Diamantes + Bônus",
+    priceAOA: 52.200,
+    image: "5600.png"
+  },
+  {
+    id: "ff-passed",
+    game: "Free Fire",
+    title: "Passe Booyah (250)",
+    priceAOA: 2.300,
+    image: "passe.png"
+  },
+  {
+    id: "ff-aecod",
+    game: "Free Fire",
+    title: "Assinatura Económica (47 Dimas)",
+    priceAOA: 800,
+    image: "aeco.png"
+  },
+  {
+    id: "ff-asemd",
+    game: "Free Fire",
+    title: "Assinatura Semanal (340 Dimas)",
+    priceAOA: 3.900,
+    image: "asem.png"
+  },
+  {
+    id: "ff-amend",
+    game: "Free Fire",
+    title: "Assinatura Mensal (1.800 Dimas)",
+    priceAOA: 11.250,
+    image: "amen.png"
+  },
+   {
+    id: "ff-e3d",
+    game: "Free Fire",
+    title: "Armas Evolutivas por 3 Dias",
+    priceAOA: 900,
+    image: "e3.png"
+  },
+   {
+    id: "ff-e7d",
+    game: "Free Fire",
+    title: "Armas Evolutivas por 7 dias",
+    priceAOA: 1.600,
+    image: "e7.png"
+  },
+   {
+    id: "ff-e30d",
+    game: "Free Fire",
+    title: "Armas Evolutivas por 30 Dias",
+    priceAOA: 5.100,
+    image: "amen.png"
+  },
+   {
+    id: "ff-likesd",
+    game: "Free Fire",
+    title: "Likes no Perfil (Até 700 Likes)",
+    priceAOA: 1.200,
+    image: "like.png"
+  },
+  {
+    id: "ff-n15-50d",
+    game: "Free Fire",
+    title: "Conta Nível 15 + 50 Diamantes",
+    priceAOA: 1500,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n15-300d",
+    game: "Free Fire",
+    title: "Conta Nível 15 + 300 Diamantes",
+    priceAOA: 2900,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n15-50d-reicaveira",
+    game: "Free Fire",
+    title: "Conta Nível 15 + 50 Diamantes + Skin Rei Caveira",
+    priceAOA: 2100,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n15-300d-reicaveira",
+    game: "Free Fire",
+    title: "Conta Nível 15 + 300 Diamantes + Skin Rei Caveira",
+    priceAOA: 3400,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n2-300d",
+    game: "Free Fire",
+    title: "Conta Nível 2 + 300 Diamantes",
+    priceAOA: 1400,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n2-300d-reicaveira",
+    game: "Free Fire",
+    title: "Conta Nível 2 + 300 Diamantes + Rei Caveira",
+    priceAOA: 2000,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n2-300d-uzui-reicaveira",
+    game: "Free Fire",
+    title: "Conta Nível 2 + 300 Diamantes + Tengen Uzui + Rei Caveira",
+    priceAOA: 5300,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n15-50d-uzui-reicaveira",
+    game: "Free Fire",
+    title: "Conta Nível 15 + 50 Diamantes + Tengen Uzui + Rei Caveira",
+    priceAOA: 4800,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n7-300d-cubo-reicaveira-sala",
+    game: "Free Fire",
+    title: "Conta Nível 7 + 300 Diamantes + Cubo Mágico + Rei Caveira + 1 Sala",
+    priceAOA: 5900,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n15-50d-cubo-reicaveira-sala",
+    game: "Free Fire",
+    title: "Conta Nível 15 + 50 Diamantes + Cubo Mágico + Rei Caveira + 1 Sala",
+    priceAOA: 5700,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n20-50d",
+    game: "Free Fire",
+    title: "Conta Nível 20 + 50 Diamantes",
+    priceAOA: 2000,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n15-50d-nitroadrenalina",
+    game: "Free Fire",
+    title: "Conta Nível 15 + 50 Diamantes + Skin Nitroadrenalina",
+    priceAOA: 2700,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n6-300d-cubo-sylmano-reicaveira",
+    game: "Free Fire",
+    title: "Conta Nível 6 + 300 Diamantes + Cubo Mágico + Skins Sylmano e Rei Caveira",
+    priceAOA: 6300,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n6-300d-cubo-manosauro-reicaveira",
+    game: "Free Fire",
+    title: "Conta Nível 6 + 300 Diamantes + Cubo Mágico + Skins Manosauro e Rei Caveira",
+    priceAOA: 6700,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n7-300d-cubo-charmano-reicaveira",
+    game: "Free Fire",
+    title: "Conta Nível 7 + 300 Diamantes + Cubo Mágico + Skins Charmano e Rei Caveira",
+    priceAOA: 6800,
+    image: "conta.png"
+  },
+  {
+    id: "ff-n2-kakashi-aguia",
+    game: "Free Fire",
+    title: "Conta Nível 2 + Skin Kakashi + Águia Branca + Troca Nick",
+    priceAOA: 7500,
+    image: "conta.png"
+  }
 
   // Delta Force M
   {
-    id: "dfm-gold500",
-    game: "Delta Force M",
-    title: "Gold 500",
-    priceAOA: 2500,
-    image: "dfm_gold_500.png"
+    id: "dfm-18",
+    game: "Delta Force",
+    title: "18 Moedas Delta Force",
+    priceAOA: 750,
+    image: "18.png"
   },
   {
-    id: "dfm-gold1200",
-    game: "Delta Force M",
-    title: "Gold 1200",
-    priceAOA: 5200,
-    image: "dfm_gold_1200.png"
+    id: "dfm-30",
+    game: "Delta Force",
+    title: "30 Moedas Delta Force",
+    priceAOA: 1100,
+    image: "30.png"
+  },
+  {
+    id: "dfm-60",
+    game: "Delta Force",
+    title: "60 Moedas Delta Force",
+    priceAOA: 2050,
+    image: "60.png"
+  },
+  {
+    id: "df-300",
+    game: "Delta Force",
+    title: "300 Moedas Delta Force",
+    priceAOA: 6100,
+    image: "300.png"
+  },
+  {
+    id: "dfm-genesis",
+    game: "Delta Force",
+    title: "Black Hawk Down - Gênesis",
+    priceAOA: 4240,
+    image: "genesis.png"
+  },
+  {
+    id: "dfm-reinvencao",
+    game: "Delta Force",
+    title: "Black Hawk Down - Reinvenção",
+    priceAOA: 7200,
+    image: "reinvencao.png"
+  },
+  {
+    id: "dfm-silencioso",
+    game: "Delta Force",
+    title: "Suprimentos do Sentinela Silencioso",
+    priceAOA: 1500,
+    image: "silencioso.png"
+  },
+  {
+    id: "dfm-avancado",
+    game: "Delta Force",
+    title: "Suprimentos do Sentinela Silencioso – Avançado",
+    priceAOA: 4260,
+    image: "avancado.png"
   },
 
   // eFootball
-  {
-    id: "efc-coin250",
-    game: "eFootball",
-    title: "Moedas eFootball 250",
-    priceAOA: 1900,
-    image: "efc_moedas_250.png"
+{
+    id: "fc-45",
+    game: "FC Mobile",
+    title: "45 FC Points",
+    priceAOA: 900,
+    image: "fc_points.png"
   },
   {
-    id: "efc-coin1050",
-    game: "eFootball",
-    title: "Moedas eFootball 1050",
-    priceAOA: 6900,
-    image: "efc_moedas_1050.png"
+    id: "fc-100",
+    game: "FC Mobile",
+    title: "100 FC Points",
+    priceAOA: 1540,
+    image: "fc_points.png"
   },
+  {
+    id: "fc-520",
+    game: "FC Mobile",
+    title: "520 FC Points",
+    priceAOA: 6120,
+    image: "fc_points.png"
+  },
+  {
+    id: "fc-1070",
+    game: "FC Mobile",
+    title: "1070 FC Points",
+    priceAOA: 12100,
+    image: "fc_points.png"
+  },
+  {
+    id: "fc-2200",
+    game: "FC Mobile",
+    title: "2200 FC Points",
+    priceAOA: 23300,
+    image: "fc_points.png"
+  },
+  {
+    id: "fc-5750",
+    game: "FC Mobile",
+    title: "5750 FC Points",
+    priceAOA: 51720,
+    image: "fc_points.png"
+  },
+  {
+    id: "fc-12000",
+    game: "FC Mobile",
+    title: "12000 FC Points",
+    priceAOA: 97400,
+    image: "fc_points.png"
+  }
 
   // Outros
   {
     id: "out-xbox-gift50",
     game: "Outros",
     title: "Gift Card Xbox 50",
-    priceAOA: 15000,
+    priceAOA: 23000,
     image: "gift_xbox_50.png"
   },
   {
     id: "out-psn-gift50",
     game: "Outros",
     title: "Gift Card PSN 50",
-    priceAOA: 17000,
+    priceAOA: 25000,
     image: "gift_psn_50.png"
   },
-  // Novos produtos
-  {
-    id: "ff-560d",
-    game: "Free Fire",
-    title: "Diamantes 560",
-    priceAOA: 5200,
-    image: "ff_diamantes_310.png"
+
+  // Black Clover M
+    {
+    id: "bcm-43",
+    game: "Black Clover M",
+    title: "43 Cristais Black Clover M",
+    priceAOA: 1400,
+    image: "43.png"
   },
   {
-    id: "ff-1120d",
-    game: "Free Fire",
-    title: "Diamantes 1120",
-    priceAOA: 9800,
-    image: "ff_diamantes_310.png"
+    id: "bcm-88",
+    game: "Black Clover M",
+    title: "88 Cristais Black Clover M",
+    priceAOA: 2800,
+    image: "88.png"
   },
   {
-    id: "ff-pass3",
-    game: "Free Fire",
-    title: "Passe de Elite 3 meses",
-    priceAOA: 12500,
-    image: "ff_passe_elite.png"
+    id: "bcm-diario",
+    game: "Black Clover M",
+    title: "Pacote Diário de Cristal Negro",
+    priceAOA: 1500,
+    image: "diario.png"
   },
   {
-    id: "dfm-gold2500",
-    game: "Delta Force M",
-    title: "Gold 2500",
-    priceAOA: 9800,
-    image: "dfm_gold_1200.png"
+    id: "bcm-invocacao",
+    game: "Black Clover M",
+    title: "Pacote Semanal Para Invocação",
+    priceAOA: 6000,
+    image: "invocacao.png"
+  },
+// Blood Strike
+  {
+    id: "bs-50-1",
+    game: "Blood Strike",
+    title: "50 Golds + 1 Bônus",
+    priceAOA: 1320,
+    image: "bloodstrike.png"
   },
   {
-    id: "dfm-gold750",
-    game: "Delta Force M",
-    title: "Gold 750",
-    priceAOA: 3600,
-    image: "dfm_gold_500.png"
+    id: "bs-96-5",
+    game: "Blood Strike",
+    title: "96 Golds + 5 Bônus",
+    priceAOA: 1900,
+    image: "bloodstrike.png"
   },
   {
-    id: "efc-coin2150",
-    game: "eFootball",
-    title: "Moedas eFootball 2150",
-    priceAOA: 12500,
-    image: "efc_moedas_1050.png"
+    id: "bs-100-5",
+    game: "Blood Strike",
+    title: "100 Golds + 5 Bônus",
+    priceAOA: 2100,
+    image: "bloodstrike.png"
   },
   {
-    id: "efc-coin500",
-    game: "eFootball",
-    title: "Moedas eFootball 500",
-    priceAOA: 3600,
-    image: "efc_moedas_250.png"
+    id: "bs-300-20",
+    game: "Blood Strike",
+    title: "300 Golds + 20 Bônus",
+    priceAOA: 4050,
+    image: "bloodstrike.png"
   },
   {
-    id: "out-xbox-gift50-b",
-    game: "Outros",
-    title: "Gift Card Xbox 2x50 (100)",
-    priceAOA: 29000,
-    image: "gift_xbox_50.png"
+    id: "bs-490-25",
+    game: "Blood Strike",
+    title: "490 Golds + 25 Bônus",
+    priceAOA: 5600,
+    image: "bloodstrike.png"
+  },
+  {
+    id: "bs-500-40",
+    game: "Blood Strike",
+    title: "500 Golds + 40 Bônus",
+    priceAOA: 6300,
+    image: "bloodstrike.png"
+  },
+  {
+    id: "bs-981-50",
+    game: "Blood Strike",
+    title: "981 Golds + 50 Bônus",
+    priceAOA: 9200,
+    image: "bloodstrike.png"
+  },
+  {
+    id: "bs-1000-100",
+    game: "Blood Strike",
+    title: "1000 Golds + 100 Bônus",
+    priceAOA: 10100,
+    image: "bloodstrike.png"
+  },
+  {
+    id: "bs-2000-260",
+    game: "Blood Strike",
+    title: "2000 Golds + 260 Bônus",
+    priceAOA: 18720,
+    image: "bloodstrike.png"
+  },
+  {
+    id: "bs-2455-123",
+    game: "Blood Strike",
+    title: "2455 Golds + 123 Bônus",
+    priceAOA: 20500,
+    image: "bloodstrike.png"
+  },
+  {
+    id: "bs-4910-246",
+    game: "Blood Strike",
+    title: "4910 Golds + 246 Bônus",
+    priceAOA: 41000,
+    image: "bloodstrike.png"
   }
 ];

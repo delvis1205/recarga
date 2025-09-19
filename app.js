@@ -44,16 +44,13 @@ function cartTotals() {
   return { subtotal, count };
 }
 
-/* Render products */
-function renderProducts() {
-  const { search, game, sort } = state;
-  let list = products.slice();
-
-  if (game !== 'all') list = list.filter(p => p.game === game);
-  if (search) {
-    const q = search.toLowerCase();
-    list = list.filter(p =>
-      p.title.toLowerCase().includes(q) || p.game.toLowerCase().includes(q)
+ /* Filtros por jogo */
+  document.querySelectorAll("#gameFilter .pill").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll("#gameFilter .pill").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      state.game = btn.dataset.game;
+      renderProducts();
     );
   }
   switch (sort) {

@@ -210,6 +210,7 @@ els.checkoutForm.addEventListener('submit', (e) => {
     nome: fd.get('nome'),
     email: fd.get('email'),
     telefone: fd.get('telefone'),
+    convite: fd.get('convite'),
     pagamento: fd.get('pagamento'),
     jogadorId: fd.get('idJogador'),
     nickname: fd.get('nickname'),
@@ -218,7 +219,7 @@ els.checkoutForm.addEventListener('submit', (e) => {
     createdAt: new Date().toISOString()
   };
   const itemsTxt = order.items.map((it,i)=>`${i+1}. ${it.title} x${it.qty} — ${currency.format(it.priceAOA*it.qty)}`).join('\n');
-  const msg = `🛒 Novo Pedido GG Shop\nID: ${order.id}\nNome: ${order.nome}\nEmail: ${order.email}\nWhatsApp: ${order.telefone}\nJogo/Nick: ${order.nickname} (ID: ${order.jogadorId})\nPagamento: ${order.pagamento}\n\nItens:\n${itemsTxt}\n\nTotal: ${currency.format(order.totalAOA)}\nData: ${new Date(order.createdAt).toLocaleString('pt-AO')}`;
+  const msg = `🛒 Novo Pedido R.J.A 🎮\nID: ${order.id}\nNome: ${order.nome}\n🧛‍♀️ Convite: ${order.convite}\nWhatsApp: ${order.telefone}\n🆔 Jogo/Nick: ${order.nickname} (ID: ${order.jogadorId})\n💳 Pagamento: ${order.pagamento}\n\n📌 Itens:\n${itemsTxt}\n\n💰 Total: ${currency.format(order.totalAOA)}\nData: ${new Date(order.createdAt).toLocaleString('pt-AO')}`;
   window.open(`https://wa.me/244973929712?text=${encodeURIComponent(msg)}`,'_blank');
   state.cart = [];
   saveCart(); renderCart();

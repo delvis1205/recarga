@@ -3,18 +3,148 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>GG Shop - Itens de Jogos em Kwanza</title>
-  <link rel="icon" href="assets/ff_diamantes_100.png" />
+  <title>Recarga Jogo Angola - Itens de Jogos em Kwanza</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
+  <style>
+    /* ===== Layout responsivo do cabeçalho ===== */
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 15px;
+      background: #0d0d0d;
+      color: #fff;
+    }
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .brand img {
+      width: 28px;
+      height: 28px;
+    }
+    .search-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      flex: 1;
+      min-width: 250px;
+    }
+    .search-area input,
+    .search-area select {
+      padding: 6px 10px;
+      border: 1px solid #444;
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: #fff;
+      flex: 1;
+    }
+    .cart-button {
+      background: #ff0044;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+    .cart-button:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== Filtros gamer ===== */
+    .game-filter {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 15px auto;
+    }
+    .game-filter .pill {
+      background: linear-gradient(45deg, #ff0044, #5500ff);
+      border: none;
+      border-radius: 25px;
+      padding: 8px 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .game-filter .pill:hover,
+    .game-filter .pill.active {
+      transform: translateY(-2px);
+      box-shadow: 0 0 10px #ff0044, 0 0 15px #5500ff;
+    }
+
+    /* ===== Grid de produtos ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+      padding: 10px;
+    }
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no celular */
+      }
+    }
+
+    /* ===== Card de produto ===== */
+    .product-card {
+      background: #111;
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      color: #fff;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 0 12px #ff0044, 0 0 18px #5500ff;
+    }
+    .product-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin: 0 auto 10px;
+      display: block;
+    }
+    .product-card h4,
+    .product-card p {
+      margin: 5px 0;
+    }
+    .product-card button {
+      margin-top: 8px;
+      background: linear-gradient(45deg, #ff0044, #5500ff);
+      border: none;
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 8px #ff0044, 0 0 12px #5500ff;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header class="topbar">
     <div class="brand">
-      <span class="logo-dot"></span>
-      <span class="brand-text">GG Shop</span>
+      <img src="favicon.png" alt="Logo">
+      <span class="brand-text">Recarga Jogo Angola</span>
     </div>
     <div class="search-area">
       <input id="searchInput" type="search" placeholder="Buscar item ou jogo..." aria-label="Buscar" />
@@ -25,20 +155,10 @@
         <option value="name-asc">Nome: A → Z</option>
       </select>
     </div>
-    
-<button class="cart-button" id="openCartBtn" aria-label="Abrir carrinho">
-  <span class="cart-icon" aria-hidden="true">
-    <!-- SVG carrinho simples -->
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3 3h2l1.4 9.2A2 2 0 0 0 8.4 14H19" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="10" cy="20" r="1" fill="currentColor"/>
-      <circle cx="18" cy="20" r="1" fill="currentColor"/>
-    </svg>
-  </span>
-  <span class="cart-text">Carrinho</span>
-  <span class="cart-count" id="cartCount">0</span>
-</button>
-
+    <button class="cart-button" id="openCartBtn" aria-label="Abrir carrinho">
+      <span class="cart-count" id="cartCount">0</span>
+      Carrinho
+    </button>
   </header>
 
   <!-- Filtros por jogo -->
@@ -130,21 +250,5 @@
   }
   </script>
   <script type="module" src="./app.js"></script>
-
-  <!-- Rodapé -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-row">
-        <div class="footer-left">
-          <strong>Recarga Jogo Angola</strong><br>
-          Itens para jogos — Pagamentos em Kz
-        </div>
-        <div class="footer-right">
-          <small>© 2025 Recarga Jogo Angola — Todos os direitos reservados.</small>
-        </div>
-      </div>
-    </div>
-  </footer>
-
 </body>
 </html>

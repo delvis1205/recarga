@@ -11,49 +11,49 @@ export const products = [
     id: "ff-100d",
     game: "Free Fire",
     title: "100 Diamantes + Bônus",
-    priceAOA: 1.340,
+    priceAOA: 1340,
     image: "dima.png"
   },
   {
     id: "ff-310d",
     game: "Free Fire",
     title: "310 Diamantes + Bônus",
-    priceAOA: 4.600,
+    priceAOA: 4600,
     image: "dima.png"
   },
   {
     id: "ff-520d",
     game: "Free Fire",
     title: "520 Diamantes + Bônus",
-    priceAOA: 5.920,
+    priceAOA: 5920,
     image: "dima.png"
   },
   {
     id: "ff-1060d",
     game: "Free Fire",
     title: "1.060 Diamantes + Bônus",
-    priceAOA: 12.300,
+    priceAOA: 12300,
     image: "dima.png"
   },
   {
     id: "ff-2180d",
     game: "Free Fire",
     title: "2.180 Diamantes + Bônus",
-    priceAOA: 24.100,
+    priceAOA: 24100,
     image: "dima.png"
   },
   {
     id: "ff-5600d",
     game: "Free Fire",
     title: "5.600 Diamantes + Bônus",
-    priceAOA: 52.200,
+    priceAOA: 52200,
     image: "dima.png"
   },
   {
     id: "ff-passed",
     game: "Free Fire",
     title: "Passe Booyah (250)",
-    priceAOA: 2.300,
+    priceAOA: 2300,
     image: "passe.png"
   },
   {
@@ -67,14 +67,14 @@ export const products = [
     id: "ff-asemd",
     game: "Free Fire",
     title: "Assinatura Semanal (340 Dimas)",
-    priceAOA: 3.900,
+    priceAOA: 3900,
     image: "asem.png"
   },
   {
     id: "ff-amend",
     game: "Free Fire",
     title: "Assinatura Mensal (1.800 Dimas)",
-    priceAOA: 11.250,
+    priceAOA: 11250,
     image: "amen.png"
   },
    {
@@ -88,21 +88,21 @@ export const products = [
     id: "ff-e7d",
     game: "Free Fire",
     title: "Armas Evolutivas por 7 dias",
-    priceAOA: 1.600,
+    priceAOA: 1600,
     image: "e7.png"
   },
    {
     id: "ff-e30d",
     game: "Free Fire",
     title: "Armas Evolutivas por 30 Dias",
-    priceAOA: 5.100,
+    priceAOA: 5100,
     image: "e30.png"
   },
    {
     id: "ff-likesd",
     game: "Free Fire",
     title: "Likes no Perfil (Até 700 Likes)",
-    priceAOA: 1.200,
+    priceAOA: 1200,
     image: "like.png"
   },
   {

@@ -219,7 +219,7 @@ els.checkoutForm.addEventListener('submit', (e) => {
     createdAt: new Date().toISOString()
   };
   const itemsTxt = order.items.map((it,i)=>`${i+1}. ${it.title} x${it.qty} — ${currency.format(it.priceAOA*it.qty)}`).join('\n');
-  const msg = `🛒 Novo Pedido R.J.A 🎮\nID: ${order.id}\nNome: ${order.nome}\n🧛‍♀️ Convite: ${order.convite}\nWhatsApp: ${order.telefone}\n🆔 Jogo/Nick: ${order.nickname} (ID: ${order.jogadorId})\n💳 Pagamento: ${order.pagamento}\n\n📌 Itens:\n${itemsTxt}\n\n💰 Total: ${currency.format(order.totalAOA)}\nData: ${new Date(order.createdAt).toLocaleString('pt-AO')}`;
+  const msg = `🛒 Novo Pedido R.J.A 🎮\nID: ${order.id}\nNome: ${order.nome}\n🧛‍♀️ Convite: ${order.convite}\nWhatsApp: ${order.telefone}\n🆔 Jogo/Nick: ${order.nickname} (ID: ${order.jogadorId})\n💳 Pagamento: ${order.pagamento}\n\n📌 Itens:\n${itemsTxt}\n\n💰 Total: ${currency.format(order.totalAOA)}\nCompra feita no dia: ${new Date(order.createdAt).toLocaleString('pt-AO')}`;
   window.open(`https://wa.me/244973929712?text=${encodeURIComponent(msg)}`,'_blank');
   state.cart = [];
   saveCart(); renderCart();

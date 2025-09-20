@@ -333,14 +333,14 @@ export const products = [
     game: "Outros",
     title: "Gift Card Xbox 50",
     priceAOA: 23000,
-    image: "gift_xbox_50.png"
+    image: "xbox.png"
   },
   {
     id: "out-psn-gift50",
     game: "Outros",
     title: "Gift Card PSN 50",
     priceAOA: 25000,
-    image: "gift_psn_50.png"
+    image: "psn.png"
   },
 
   // Black Clover M

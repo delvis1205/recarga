@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>R.J.A - Morásio Digital</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    /* ===== Layout responsivo do cabeçalho ===== */
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 15px;
+      background: #0d0d0d;
+      color: #fff;
+    }
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .brand img {
+      width: 28px;
+      height: 28px;
+    }
+    .search-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      flex: 1;
+      min-width: 250px;
+    }
+    .search-area input,
+    .search-area select {
+      padding: 6px 10px;
+      border: 1px solid #444;
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: #fff;
+      flex: 1;
+    }
+    .cart-button {
+      background: #ff0044;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 150px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+    .cart-button:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== Filtros gamer ===== */
+    .game-filter {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 15px auto;
+    }
+    .game-filter .pill {
+      background: linear-gradient(45deg, #ff0044, #5500ff);
+      border: none;
+      border-radius: 25px;
+      padding: 8px 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .game-filter .pill:hover,
+    .game-filter .pill.active {
+      transform: translateY(-2px);
+      box-shadow: 0 0 10px #ff0044, 0 0 15px #5500ff;
+    }
+
+    /* ===== Grid de produtos ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+      padding: 10px;
+    }
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no celular */
+      }
+    }
+
+    /* Novo estilo de botão amarelo flutuante nos cards */
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FFC700;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card button:hover {
+  transform: scale(1.1);
+}
+    }
+.card img.thumb {
+  width: 100%;
+  height: 190px;       /* controla a altura fixa */
+  object-fit: cover;   /* mantém proporção e corta se necessário */
+  object-position: center;
+  display: block;
+    }
+    .product-card h4,
+    .product-card p {
+      margin: 5px 0;
+    }
+    .product-card button {
+      margin-top: 8px;
+      background: linear-gradient(45deg, #ff0044, #5500ff);
+      border: none;
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 8px #ff0044, 0 0 12px #5500ff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo.png" alt="Logo">
+      <span class="brand-text">R.J.A | Morásio Digital</span>
+    </div>
+    <div class="search-area">
+      <input id="searchInput" type="search" placeholder="Buscar item ou jogo..." aria-label="Buscar" />
+      <select id="sortSelect" aria-label="Ordenar">
+        <option value="relevance">Relevância</option>
+        <option value="price-asc">Preço: menor → maior</option>
+        <option value="price-desc">Preço: maior → menor</option>
+        <option value="name-asc">Nome: A → Z</option>
+      </select>
+    </div>
+    <button class="cart-button" id="openCartBtn" aria-label="Abrir carrinho">
+      <span class="cart-count" id="cartCount">0</span>
+      Carrinho
+    </button>
+  </header>
+
+
+  <!-- Filtros por jogo -->
+  <nav class="game-filter" id="gameFilter" aria-label="Filtrar por jogo">
+    <button class="pill active" data-game="all">Todos</button>
+    <button class="pill" data-game="Free Fire">Free Fire</button>
+    <button class="pill" data-game="Blood Strike">Blood Strike</button>
+    <button class="pill" data-game="Delta Force">Delta Force</button>
+    <button class="pill" data-game="Black Clover M">Black Clover M</button>
+    <button class="pill" data-game="FC Mobile">FC Mobile</button>
+    <button class="pill" data-game="Outros">Outros</button>
+  </nav>
+
+  <!-- Grid de produtos -->
+  <main class="container">
+    <section id="productsGrid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <!-- Carrinho lateral -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Carrinho">
+    <div class="cart-header">
+      <h2>Seu Carrinho</h2>
+      <button id="closeCartBtn" class="icon-btn" aria-label="Fechar carrinho">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">AOA 0,00</strong>
+      </div>
+      <div class="row small">
+        <span>Taxas</span>
+        <span>Incluídas no preço</span>
+      </div>
+      <button id="checkoutBtn" class="primary">Finalizar compra</button>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay" hidden></div>
+
+  <!-- Modal de checkout -->
+  <dialog id="checkoutModal" class="modal">
+    <form method="dialog" class="checkout-form" id="checkoutForm">
+      <div class="modal-header">
+        <h3>Finalizar compra</h3>
+        <button class="icon-btn" id="closeCheckout" aria-label="Fechar">✕</button>
+      </div>
+      <div class="form-grid">
+        <label>
+          Nome completo
+          <input name="nome" required autocomplete="name" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>
+          Telefone (WhatsApp)
+          <input type="tel" name="telefone" required inputmode="tel" />
+        </label>
+        <label>
+          ID do jogador
+          <input name="idJogador" required />
+        </label>
+        <label>
+          Nickname no jogo
+          <input name="nickname" required />
+        </label>
+        <label>
+          Código de Convite
+          <input name="convite" required autocomplete="convite" />
+        </label>
+        <label>
+          Método de pagamento
+          <select name="pagamento" required>
+            <option value="Pagamento Presencial">Pagamento Presencial</option>
+            <option value="Express: 973929712">Express</option>
+            <option value="Unitel Money: 973929712">Unitel Money</option>
+            <option value="Entidade: 10116 |Referência: 930441438">Referência</option>
+            <option value="BAI: 0040.0000.9841.5347.1016.4">Transferência Banco BAI</option>
+            <option value="BFA: 0006.0000.6124.2719.3019.8">Transferência Banco BFA</option>
+          </select>
+        </label>
+      </div>
+      <div class="summary" id="checkoutSummary"></div>
+      <div class="actions">
+        <button type="button" class="ghost" id="cancelCheckout">Cancelar</button>
+        <button type="submit" class="primary">Confirmar pedido</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Import map + App -->
+  <script type="importmap">
+  {
+    "imports": {
+      "nanoid": "https://esm.sh/nanoid@5.0.7/non-secure"
+    }
+  }
+  </script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
